@@ -38,6 +38,7 @@ async def on_message(message):
             await message.channel.send("Would you like me to\n[1]Predict your future? \n[2]Summon a priceless gift? \n")
             msg = await client.wait_for('message',check=None , timeout=None)    #wait_for is a function in the documentation which responds to the first event that meets the requirements, in this case the first message the user responds with        
             response_wish = msg.content                                         #response variable now equals the msg variable in the content                                
+            #the strings in the list 'answers' will be picked at random to answer a question
             answers = ['Yes it will definately happen',
                        'My powers of Precognition are uncertain',
                        'No that will not happen']
