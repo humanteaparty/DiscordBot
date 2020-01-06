@@ -33,7 +33,8 @@ async def on_message(message):
         
         wishes = wishes
         while wishes != 0:
-            #normal print statements would only print the statement onto the python shell, so I have to use the method 'message.channel.send' to send it do discord
+            #normal print statements would only print the statement onto the python shell,
+            #so I have to use the method 'message.channel.send' to send it do discord
             await message.channel.send("Would you like me to\n[1]Predict your future? \n[2]Summon a priceless gift? \n")
             msg = await client.wait_for('message',check=None , timeout=None)    #wait_for is a function in the documentation which responds to the first event that meets the requirements, in this case the first message the user responds with        
             response_wish = msg.content                                         #response variable now equals the msg variable in the content                                
@@ -73,7 +74,7 @@ async def on_message(message):
         await message.channel.send("Hello")
 
     if "how are you" in message.content.lower():
-        await message.channel.send("I am fine. Thank you for asking!")
+        await message.channel.send("I am good! :)")
 
 
 
